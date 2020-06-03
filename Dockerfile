@@ -7,6 +7,10 @@ ARG workspace="none"
 RUN apt-get update \
     && apt-get install --assume-yes wget bash-completion unzip
 
+RUN wget https://codejudge-starter-repo-artifacts.s3.ap-south-1.amazonaws.com/backend-project/database/db-setup.sh
+RUN chmod 775 ./db-setup.sh
+RUN sh db-setup.sh
+
 # Install Workspace for Python 
 
 RUN if [ $workspace = "theia" ] ; then \
