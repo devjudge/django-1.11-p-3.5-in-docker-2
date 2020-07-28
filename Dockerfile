@@ -14,8 +14,8 @@ RUN sh db-setup.sh
 # Install Workspace for Python 
 
 RUN if [ $workspace = "theia" ] ; then \
-	wget https://codejudge-starter-repo-artifacts.s3.ap-south-1.amazonaws.com/theia/pre-build.sh \
-    && chmod 775 ./pre-build.sh && sh pre-build.sh ; fi
+	wget -O pre-build-theia.sh https://codejudge-starter-repo-artifacts.s3.ap-south-1.amazonaws.com/theia/pre-build.sh \
+    && chmod 775 ./pre-build-theia.sh && sh pre-build-theia.sh ; fi
 
 WORKDIR /var/
 
