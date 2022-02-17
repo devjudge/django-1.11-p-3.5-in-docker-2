@@ -19,6 +19,5 @@ from restapi.views import *
 
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'', index),
+    url(r'^admin/', admin.site.urls)
 ]
