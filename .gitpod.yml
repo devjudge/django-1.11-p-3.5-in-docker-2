@@ -5,6 +5,7 @@ tasks:
       bash database-setup.sh
     init: |
       pip install --upgrade pip
+      python -m pip install Django==1.11 pytz==2019.2
       pip install -r requirements.txt
       python manage.py migrate
     command: python manage.py runserver 0.0.0.0:8080
